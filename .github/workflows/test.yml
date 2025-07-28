@@ -1,0 +1,33 @@
+name: Test
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup repo
+        uses: actions/checkout@v4
+
+      - name: Install HeyCart CLI
+        uses: ./.
+
+      - name: Test binary
+        run: heycart-cli --version
+
+      - name: Clone FroshTools
+        run: git clone https://github.com/FriendsOfHeyCart/FroshTools.git
+
+      - name: Zip FroshTools
+        run: heycart-cli extension zip FroshTools
+
+      - name: Validate
+        run: heycart-cli extension validate FroshTools-*.zip

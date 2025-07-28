@@ -1,0 +1,21 @@
+name: 'HeyCart CLI Action'
+description: 'GitHub Action for HeyCart CLI, a command line tool helper for HeyCart'
+author: 'heycart AG'
+branding:
+  color: 'green'
+  icon: 'package'
+
+inputs:
+  version:
+    description: 'HeyCart CLI version'
+    default: 'latest'
+    required: false
+  token:
+    description: "GitHub Token used to authenticate against a repository for Git context"
+    default: ${{ github.token }}
+    required: false
+
+runs:
+  using: 'node20'
+  main: 'dist/main/main.js'
+  post: 'dist/post/main.js'
