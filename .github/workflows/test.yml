@@ -23,11 +23,11 @@ jobs:
       - name: Test binary
         run: heycart-cli --version
 
-      - name: Clone FroshTools
-        run: git clone https://github.com/FriendsOfHeyCart/FroshTools.git
+      - name: Clone HeyPlatformDemoData
+        run: git clone https://github.com/heycart/HeyPlatformDemoData.git
 
-      - name: Zip FroshTools
-        run: heycart-cli extension zip FroshTools
+      - name: Zip HeyPlatformDemoData
+        run: heycart-cli extension zip HeyPlatformDemoData
 
       - name: Validate
-        run: heycart-cli extension validate FroshTools-*.zip
+        run: heycart-cli extension validate HeyPlatformDemoData-*.zip
