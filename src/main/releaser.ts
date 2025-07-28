@@ -68,8 +68,8 @@ export async function install(version: string) {
     debug(`Release ${version} is a pre-release`);
   }
 
-  exportVariable("SHOPWARE_CLI_VERSION", release.tag_name)
-  process.env.SHOPWARE_CLI_VERSION = release.tag_name;
+  exportVariable("HEYCART_CLI_VERSION", release.tag_name)
+  process.env.HEYCART_CLI_VERSION = release.tag_name;
 
   const heycartCliCacheDir = await globalCacheDir('heycart-cli');
 
