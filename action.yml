@@ -1,6 +1,6 @@
 name: 'HeyCart CLI Action'
 description: 'GitHub Action for HeyCart CLI, a command line tool helper for HeyCart'
-author: 'heycart AG'
+author: 'shopware AG'
 branding:
   color: 'green'
   icon: 'package'
