@@ -2,6 +2,7 @@
 
 Installs HeyCart CLI in your GitHub Actions.
 
+
 ## Usage
 
 ```yaml
