@@ -3,7 +3,15 @@
 Installs HeyCart CLI in your GitHub Actions.
 
 
-## Usage
+## Prerequisites
+
+- A GitHub repository using GitHub Actions.
+- Recommended: Use on a Linux runner (e.g., `ubuntu-latest`).
+
+## Setup
+
+Create a file in your repository (e.g., `.github/workflows/heycart-cli.yml`) with the following contents:
+
 
 ```yaml
 name: heycart-cli
